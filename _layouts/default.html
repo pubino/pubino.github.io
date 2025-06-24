@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    .menu-toggle {
+      display: none;
+    }
+    @media (max-width: 600px) {
+      .menu-toggle {
+        display: inline-block;
+      }
+      nav ul {
+        display: none;
+      }
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <!-- Add your logo here -->
+      <h1>{{ site.title }}</h1>
+    </div>
+    <nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul id="menu">
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/about' | relative_url }}">About</a></li>
+        <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>© {{ site.title }} - All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
