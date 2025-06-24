@@ -21,6 +21,10 @@ body {
   flex-grow: 1; /* Allow the page content to grow and fill available space */
 }
 
+[class="header-container"] {
+  padding: 1rem 0 0 1rem;
+}
+
 header {
   background-color: black;
   color: white;
