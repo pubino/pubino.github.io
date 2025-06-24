@@ -46,7 +46,7 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  justify-content: right;
+  justify-content: flex-end; /* Align items to the right */
 }
 
 nav ul li {
@@ -58,6 +58,23 @@ nav a {
   text-decoration: none;
   font-size: small;
   font-weight: 600;
+  position: relative; /* Needed for the border */
+}
+
+nav a:hover,
+nav a.active { /* Apply styles to hovered links and active page */
+  color: #ff9e22;
+}
+
+nav a:hover::after,
+nav a.active::after { /* Create bottom border effect */
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Position the border below the text */
+  height: 3px;
+  width: 100%;
+  background-color: #ff9e22;
 }
 
 .menu-toggle {
