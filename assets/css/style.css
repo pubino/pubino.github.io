@@ -71,7 +71,7 @@ nav a.active::after { /* Create bottom border effect */
   content: '';
   position: absolute;
   left: 0;
-  bottom: -3px; /* Position the border below the text */
+  bottom: -13px; /* Position the border below the text */
   height: 3px;
   width: 100%;
   background-color: #ff9e22;
