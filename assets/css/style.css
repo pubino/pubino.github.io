@@ -4,35 +4,30 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Ensure consistent sizing */
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body fills full height */
 }
 
 .page {
+  flex: 1; /* Allow the main page content to expand */
+  display: flex;
+  flex-direction: column;
+}
+
+header, #main {
   width: 100%;
-}
-
-header, #main, footer {
-  width: 100%;
-}
-
-[class="header-container"] {
-  padding: 1rem 1rem 0 1rem;
-}
-
-.header-container, .container, .footer-container {
-  max-width: 90rem;
-  margin: 0 auto; /* Center the container */
-  padding: 0 1rem; /* Add some padding for aesthetics */
 }
 
 header {
-  background-color: #333;
+  background-color: black;
   color: white;
 }
 
@@ -85,6 +80,22 @@ nav a.active::after { /* Create bottom border effect */
   cursor: pointer;
   font-size: 16px;
   padding: 10px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  min-height: 200px; /* Ensure footer is at least 200px tall */
+  text-align: center;
+  padding: 1rem;
+  flex-shrink: 0; /* Prevent footer from shrinking */
+}
+
+.header-container, .container, .footer-container {
+  max-width: 90rem;
+  margin: 0 auto; /* Center the container */
+  padding: 0 1rem; /* Add some padding for aesthetics */
 }
 
 @media (max-width: 600px) {
