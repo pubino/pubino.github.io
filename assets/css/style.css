@@ -35,6 +35,7 @@ header {
 nav {
   position: absolute;
   bottom: 0px;
+  width: 100%;
 }
 
 nav ul {
@@ -96,8 +97,12 @@ nav a {
 }
 
 @media (max-width: 600px) {
+  nav {
+    position: relative; /* Adjust to fit mobile layout */
+  }
+  
   nav ul {
-    display: none;
+    display: none; /* Start hidden on mobile */
     position: absolute;
     top: 50px;
     right: 15px;
@@ -105,14 +110,8 @@ nav a {
     flex-direction: column;
     width: auto;
   }
-
+  
   .menu-toggle {
-    display: inline-block;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-    width: auto;
+    display: inline-block; /* Show menu button on mobile */
   }
 }
