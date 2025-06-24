@@ -5,7 +5,7 @@
     {% assign menu_items = page.menu | default: site.default_menu %}
     {% for item in menu_items %}
       {% assign is_active = false %}
-      {% if page.url == item.url %}
+      {% if page.url == item.url or page.url == item.url | append: '/' %}
         {% assign is_active = true %}
       {% endif %}
       <li>
