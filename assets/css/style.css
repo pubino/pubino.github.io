@@ -5,66 +5,42 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-}
-
-header {
-  box-sizing: border-box;
-  color: rgb(255, 255, 255);
-  display: block;
-  font-size: 16px;
-  font-weight: 400;
-  height: 142px;
-  line-height: 28px;
-  margin-left: 0px;
-  margin-right: 0px;
-  max-width: 1440px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  text-align: left;
-  background-color: #333;
-}
-
-.logo h1 {
-  margin: 0;
-}
-
-nav {
-  position: absolute;
-  bottom: 0px;
   width: 100%;
 }
 
+.page {
+  width: 100%;
+}
+
+header, #main, footer {
+  width: 100%;
+}
+
+.header-container, .container, .footer-container {
+  max-width: 90rem;
+  margin: 0 auto; /* Center the container */
+  padding: 0 1rem; /* Add some padding for aesthetics */
+}
+
+header {
+  background-color: #333;
+  color: white;
+}
+
+nav {
+  position: relative;
+}
+
 nav ul {
-  box-sizing: border-box;
-  color: rgb(255, 255, 255);
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  font-size: 16px;
-  font-weight: 400;
-  height: 55px;
-  line-height: 28px;
   list-style: none;
+  padding: 0;
   margin: 0;
-  max-width: calc(80% - 10px);
-  padding-inline-start: 0px;
-  padding-left: 0px;
-  text-align: left;
-  width: 799.953px;
 }
 
 nav ul li {
-  box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0);
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  display: block;
-  font-weight: 500;
-  height: 55px;
-  line-height: 28px;
-  padding: 12px 6px 15px;
-  width: 100.93px;
+  padding: 12px 6px;
 }
 
 nav a {
@@ -80,27 +56,20 @@ nav a {
   cursor: pointer;
   font-size: 16px;
   padding: 10px;
-  position: absolute;
-  top: 10px;
-  right: 15px;
 }
 
 @media (max-width: 600px) {
-  nav {
-    position: relative; /* Adjust to fit mobile layout */
-  }
-  
   nav ul {
-    display: none; /* Start hidden on mobile */
+    display: none;
+    flex-direction: column;
     position: absolute;
+    background-color: #333;
     top: 50px;
     right: 15px;
-    background-color: #333;
-    flex-direction: column;
     width: auto;
   }
-  
+
   .menu-toggle {
-    display: inline-block; /* Show menu button on mobile */
+    display: inline-block;
   }
 }
