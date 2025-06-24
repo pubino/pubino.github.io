@@ -3,6 +3,8 @@ layout: default
 title: Publications
 ---
 
+# Publications
+
 1. [Yurinskii's Coupling for Martingales](https://mdcattaneo.github.io/papers/Cattaneo-Masini-Underwood_2025_AOS.pdf), with Ricardo Masini and William Underwood.
 _Annals of Statistics_, forthcoming.  
 [Supplemental](https://mdcattaneo.github.io/papers/Cattaneo-Masini-Underwood_2025_AOS--Supplement.pdf)
