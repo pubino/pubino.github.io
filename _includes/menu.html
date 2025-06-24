@@ -1,0 +1,8 @@
+<nav>
+  <button class="menu-toggle" onclick="toggleMenu()">MENU ☰</button>
+  <ul id="menu">
+    {% for item in page.menu %}
+      <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
