@@ -1,3 +1,22 @@
 title: An Example Jekyll Site
 description: A simple Jekyll site hosted on GitHub Pages
 theme: minima
+default_menu:
+  - title: Home
+    url: /
+  - title: Publications
+    url: /publications
+  - title: Research
+    url: /research
+  - title: Software
+    url: /software
+  - title: Students
+    url: /students
+  - title: Teaching
+    url: /teaching
+  - title: Short Courses
+    url: /short-courses
+  - title: Talks
+    url: /talks
+  - title: Service
+    url: /service

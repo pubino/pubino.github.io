@@ -1,0 +1,10 @@
+<!-- _includes/menu.html -->
+<nav>
+  <button class="menu-toggle" onclick="toggleMenu()">MENU ☰</button>
+  <ul id="menu">
+    {% assign menu_items = page.menu | default: site.default_menu %}
+    {% for item in menu_items %}
+      <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>

@@ -11,14 +11,7 @@
     <div class="logo">
       <h1>{{ site.title }}</h1>
     </div>
-    <nav>
-      <button class="menu-toggle" onclick="toggleMenu()">MENU ☰</button>
-      <ul id="menu">
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li><a href="{{ '/about' | relative_url }}">About</a></li>
-        <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
-      </ul>
-    </nav>
+    {% include menu.html %}
   </header>
 
   <main>
@@ -29,15 +22,6 @@
     <p>© {{ site.title }} - All rights reserved.</p>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      var menu = document.getElementById('menu');
-      if (menu.style.display === 'block' || menu.style.display === '') {
-        menu.style.display = 'none';
-      } else {
-        menu.style.display = 'block';
-      }
-    }
-  </script>
+  <script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
 </body>
 </html>

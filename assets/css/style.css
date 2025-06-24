@@ -1,3 +1,4 @@
+/* assets/css/style.css */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 body {
@@ -21,11 +22,7 @@ header {
   padding-right: 15px;
   position: relative;
   text-align: left;
-  -webkit-text-size-adjust: 100%;
-  unicode-bidi: isolate;
-  width: 1258px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background-color: #333; /* Assuming a background color for visibility */
+  background-color: #333;
 }
 
 .logo h1 {
@@ -35,6 +32,7 @@ header {
 nav {
   position: absolute;
   bottom: 0px;
+  width: 100%;
 }
 
 nav ul {
@@ -53,28 +51,20 @@ nav ul {
   padding-inline-start: 0px;
   padding-left: 0px;
   text-align: left;
-  -webkit-text-size-adjust: 100%;
-  unicode-bidi: isolate;
   width: 799.953px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 nav ul li {
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0);
-  border-bottom: none;
   color: rgb(255, 255, 255);
   cursor: pointer;
   display: block;
   font-weight: 500;
   height: 55px;
   line-height: 28px;
-  list-style: none;
   padding: 12px 6px 15px;
-  text-align: left;
-  text-decoration: none;
   width: 100.93px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 nav a {
@@ -96,8 +86,12 @@ nav a {
 }
 
 @media (max-width: 600px) {
+  nav {
+    position: relative; /* Adjust to fit mobile layout */
+  }
+  
   nav ul {
-    display: none;
+    display: none; /* Start hidden on mobile */
     position: absolute;
     top: 50px;
     right: 15px;
@@ -105,14 +99,8 @@ nav a {
     flex-direction: column;
     width: auto;
   }
-
+  
   .menu-toggle {
-    display: inline-block;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-    width: auto;
+    display: inline-block; /* Show menu button on mobile */
   }
 }
